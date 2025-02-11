@@ -1,0 +1,50 @@
+<header class="fixed top-0 text-gray-800 py-1 text-center z-50  px-2 xl:px-0 mt-2 w-full left-0">
+  <div class="max-w-7xl mx-auto">
+    <div
+      class="grid xl:grid-cols-10 align-middle items-center bg-white rounded-full px-4 transition-all duration-300 ease-in-out py-2 xl:py-0">
+      <h1 class="text-base xl:text-xl font-bold text-left col-span-4">
+        <a routerLink="" fragment="home">
+          <div class="flex flex-row">
+            <img src="assets/images/VS logo.svg" class="h-8 w-8" />
+            <span class="text-primary mx-2 text-xl">Valeria Softwares</span>
+          </div>
+        </a>
+      </h1>
+      <div class="justify-end hidden xl:flex col-span-6">
+        <nav class="text-base font-bold">
+          <ul class="list-none flex">
+            @for (keys of objKeys(props.menu); track keys; let idx = $index) {
+            <li>
+              <app-menu [props]="props" [keys]="keys"></app-menu>
+            </li>
+            }
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="absolute right-8 xl:hidden top-4">
+    <button id="menu-btn" (click)="toggleMenu()"
+      class="relative w-7 h-[18px] flex flex-col justify-between items-center group">
+      <span class="block h-[2px] md:h-[3px] w-full transition-transform duration-300 ease-in-out bg-primary"  [class.rotate-45]="isMenuOpen" [class.translate-y-2]="isMenuOpen"></span>
+      <span class="block h-[2px] md:h-[3px] w-full transition-opacity duration-300 ease-in-out bg-primary" [class.opacity-0]="isMenuOpen"></span>
+      <span class="block h-[2px] md:h-[3px] w-full bg-gray-100 transition-transform duration-300 ease-in-out bg-primary"  [class.-rotate-45]="isMenuOpen" [class.-translate-y-2]="isMenuOpen"></span>
+    </button>
+  </div>
+  <div [ngClass]="{
+    'translate-x-0 opacity-100': isMenuOpen,
+    '-translate-x-full opacity-0': !isMenuOpen
+  }"
+    class="absolute top-16 left-2 right-2 bg-white text-black shadow-lg xl:hidden transform transition-all rounded-2xl duration-700 ease-in-out overflow-hidden px-4 py-4">
+    <ul class="flex flex-col text-lg text-left text-primary font-semibold relative">
+      <li *ngFor="let key of objKeys(props.menu); let idx = index" class="m-1 cursor-pointer">
+
+        <a class="relative pl-4 no-underline transition-colors duration-300 ease-in-out"
+          (click)="isMenuOpen = false" [routerLink]="props.menu[key].path" [fragment]="props.menu[key].fragment" >
+          {{ key }}
+        </a>
+        <hr class="p-0 m-1" />
+      </li>
+    </ul>
+  </div>
+</header>

@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@layer reset, primeng;
+
+
+@layer base {
+  @font-face {
+    font-family: 'NotoSans-Regular';
+    src: url('/assets/fonts/Noto/NotoSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'NotoSans-Regular', sans-serif;
+    background-color: #F4F3F9;
+  }
+}
+
+.vs-header {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-weight: 500;
+}
+
+.vs-menu {
+  font-family: 'NotoSans-Regular', sans-serif;
+  font-weight: 600;
+  font-size: small;
+}
+
+@layer utilities {
+  @keyframes slide-infinite {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .animate-slide-infinite {
+    animation: slide-infinite 10s linear infinite;
+    display: flex;
+    width: calc(180%); /* Double the width of the container for seamless scrolling */
+  }
+}
+
+.h-scroll-infinite:hover {
+  animation-play-state: paused;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes float {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(20px, 20px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
