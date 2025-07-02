@@ -10,29 +10,22 @@ export class HorizontalScrollComponent implements OnInit {
     {
       "name": "GMR Aerocity",
       "path": "assets/images/gmr-aero-logo.png",
-      "alt": 'GMR Aerocity Logo.',
     },
     {
-      "name": "GMR RAXA Techno | Expert Security",
-      "path": "assets/images/gmr-logo-small.png",
-      "alt": 'GMR RAXA Techno Logo.',
-    },
+    "name": "GMR RAXA Techno | Expert Security",
+    "path": "assets/images/gmr-logo-small.png"},
     {
       "name": "GMR Aviation - Experience Personalised luxury air travel",
-      "path": "assets/images/aviation-logo.png",
-      "alt": 'GMR Aviation Logo.',
+      "path": "assets/images/aviation-logo.png"
     },
     {
       "name": "TAZO Home",
-      "path": "assets/images/tazo.png",
-      "alt": 'Tazo Logo.',
+      "path": "assets/images/tazo.png"
     },
     {
       "name": "Wealthworks Partners",
-      "path": 'assets/images/wwpts3.png',
-      "alt": 'Wealthworks Partners Logo.',
-    }
-  ];
+      "path": 'assets/images/wwpts3.png'
+    }];
   autoScrollInterval: any;
   loading = false;
   selectedCompany: string;

@@ -1,37 +1,36 @@
 <div class="pl-12  hidden overflow-x-auto scrollbar-hide space-x-4 pt-4 xl:flex">
   <div *ngFor="let company of companies"
     [ngClass]="{'transition-transform duration-300 ease-in-out bg-gray-200': selectedCompany == company.name }"
-    class="flex-shrink-0 w-56 h-40 flex items-center justify-center font-bold cursor-pointer"
-    (click)="show(company.name)">
-    <img src="{{ company.path }}" alt="{{ company.alt }}" *ngIf="company.path" class="p-4 h-20" />
+    class="flex-shrink-0 w-56 h-40 flex items-center justify-center font-bold cursor-pointer" (click)="show(company.name)">
+    <img src="{{ company.path }}" *ngIf="company.path" class="p-4 h-20" />
     <span class="" *ngIf="!company.path">{{ company.name }}</span>
   </div>
 </div>
 
 <div class="px-4 flex flex-col xl:hidden  pt-4">
   <div *ngFor="let company of companies" class="place-items-center m-8">
-    <img src="{{ company.path }}" alt="{{ company.alt }}" class="h-12" />
+    <img src="{{ company.path }}" class="h-12"/>
   </div>
 </div>
 
 
 <section class="mx-12 text-gray-800" *ngIf="selectedCompany == 'GMR RAXA Techno | Expert Security'"
-  [ngClass]="{'bg-gray-200': selectedCompany == 'GMR RAXA Techno | Expert Security' }">
+  [ngClass]="{'bg-gray-200': selectedCompany == 'GMR RAXA Techno | Expert Security' }"
+  >
   <div class="grid auto-rows-min grid-cols-2 gap-6 p-4">
     <div class="py-4 px-4">
       <p class="transition-transform duration-300 ease-in-out text-lg">
         RAXA Techno Security Solutions, a subsidiary of the GMR Group, provides integrated security services across
         various industries and locations.
       </p>
-      <a href="https://www.gmrgroup.in/aerobusiness/raxa-tech" target="_blank" class="text-primary pt-8">View
+      <a href="https://www.gmrgroup.in/aerobusiness/raxa-tech" target="_blank" class="text-primary underline pt-8">View
         Site</a>
     </div>
 
     <div class="place-items-center flex flex-row">
-      <img src="assets/images/raxa-banner-new-1.jpg" alt="RAXA Banner." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/aviation-academy-class.jpg" alt="GMR Academy Class." fetchpriority="low"
-        class="h-24 object-cover" />
-      <img src="assets/images/aviation.jpg" alt="Aircraft." fetchpriority="low" class="h-24 object-cover" />
+      <img src="assets/images/raxa-banner-new-1.jpg" class="h-24 object-cover" />
+      <img src="assets/images/aviation-academy-class.jpg" class="h-24 object-cover" />
+      <img src="assets/images/aviation.jpg" class="h-24 object-cover" />
     </div>
   </div>
 </section>
@@ -41,19 +40,17 @@
   <div class="grid auto-rows-min grid-cols-2 gap-6 p-4">
     <div class="py-4 px-4">
       <p class="transition-transform duration-300 ease-in-out text-lg">
-        <a href="https://www.gmraviation.com/" target="_blank" class="text-primary">GMR Aviation</a>, a subsidiary of
-        the GMR Group, is a leading air charter company in India, established in 2006.
+        GMR Aviation, a subsidiary of the GMR Group, is a leading air charter company in India, established in 2006.
         They offer personalized luxury air travel services, operating over 10,000 flights and covering more than 200
         airports across India.
       </p>
-      <a href="https://www.gmraviation.com/" target="_blank" class="text-primary">Visit Site</a>
+      <a href="https://www.gmraviation.com/" target="_blank" class="text-primary underline">View Site</a>
     </div>
 
     <div class="place-items-center flex flex-row">
-      <img src="assets/images/av-exterior-6.jpg" alt="Aircraft Exterior." fetchpriority="low"
-        class="h-24 object-cover" />
-      <img src="assets/images/fleet-show.jpg" alt="Fleet Show." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/av-Group46.png" alt="Aviation Group." fetchpriority="low" class="h-24 object-cover" />
+      <img src="assets/images/av-exterior-6.jpg" class="h-24 object-cover" />
+      <img src="assets/images/fleet-show.jpg" class="h-24 object-cover" />
+      <img src="assets/images/av-Group46.png" class="h-24 object-cover" />
     </div>
   </div>
 </section>
@@ -62,17 +59,17 @@
   <div class="grid auto-rows-min grid-cols-2 gap-6 p-4">
     <div class="py-4 px-4">
       <p class="transition-transform duration-300 ease-in-out text-lg">
-        <a href="https://gmraerocity.com" target="_blank" class="text-primary">GMR Aerocity</a>, located near Delhi
-        International Airport, is a comprehensive lifestyle and business hub offering a
+        GMR Aerocity, located near Delhi International Airport, is a comprehensive lifestyle and business hub offering a
         blend of commercial spaces, luxury hotels, dining, shopping, and entertainment options.
+
+
       </p>
-      <a href="https://gmraerocity.com" target="_blank" class="text-primary">Visit Site</a>
+      <a href="https://gmraerocity.com" target="_blank" class="text-primary underline">View Site</a>
     </div>
 
     <div class="place-items-center flex flex-row">
-      <img src="assets/images/gmr-delhi.png" alt="GMR Delhi Office." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/web-hospitality-1.jpg" alt="Web web-hospitality." fetchpriority="low"
-        class="h-24 object-cover" />
+      <img src="assets/images/gmr-delhi.png" class="h-24 object-cover" />
+      <img src="assets/images/web-hospitality-1.jpg" class="h-24 object-cover" />
 
     </div>
   </div>
@@ -82,18 +79,17 @@
   <div class="grid auto-rows-min grid-cols-2 gap-6 p-4">
     <div class="py-4 px-4">
       <p class="transition-transform duration-300 ease-in-out text-lg">
-        <a href="https://tazohome.com/" target="_blank" class="text-primary">Tazo Home</a>
-        offers a range of natural, eco-friendly cleaning products designed to keep your home spotless and
+        Tazo Home offers a range of natural, eco-friendly cleaning products designed to keep your home spotless and
         safe. Their product line includes solutions for surface, bathroom, kitchen, and laundry cleaning, all made from
         100% natural ingredients.
       </p>
-      <a href="https://tazohome.com/" target="_blank" class="text-primary">Visit Site</a>
+      <a href="https://tazohome.com/" target="_blank" class="text-primary underline">View Site</a>
     </div>
 
     <div class="place-items-center flex flex-row">
-      <img src="assets/images/tazo-1.png" alt="Tazo Image 1." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/tazo-2.jpg" alt="Tazo Image 2." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/tazo-3.jpg" alt="Tazo Image 3." fetchpriority="low" class="h-24 object-cover" />
+      <img src="assets/images/tazo-1.png" class="h-24 object-cover" />
+      <img src="assets/images/tazo-2.jpg" class="h-24 object-cover" />
+      <img src="assets/images/tazo-3.jpg" class="h-24 object-cover" />
     </div>
   </div>
 </section>
@@ -102,17 +98,15 @@
   <div class="grid auto-rows-min grid-cols-2 gap-6 p-4">
     <div class="py-4 px-4">
       <p class="transition-transform duration-300 ease-in-out text-lg">
-        <a href="https://wwpts.com/" target="_blank" class="text-primary">Wealthworks Partners</a>, Inc is a leading
-        professional advisory firm and offering six service lines that cover a
-        broad range of professional services.
+        Wealthworks Partners, Inc is a leading professional advisory firm and offering six service lines that cover a broad range of professional services.
       </p>
-      <a href="https://wwpts.com/" target="_blank" class="text-primary">Visit Site</a>
+      <a href="https://wwpts.com/" target="_blank" class="text-primary underline">View Site</a>
     </div>
 
     <div class="place-items-center flex flex-row">
-      <img src="assets/images/wwp-1.jpg" alt="WWP Image 1." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/wwp-2.jpg" alt="WWP Image 2." fetchpriority="low" class="h-24 object-cover" />
-      <img src="assets/images/wwp-3.jpg" alt="WWP Image 3." fetchpriority="low" class="h-24 object-cover" />
+      <img src="assets/images/wwp-1.jpg" class="h-24 object-cover" />
+      <img src="assets/images/wwp-2.jpg" class="h-24 object-cover" />
+      <img src="assets/images/wwp-3.jpg" class="h-24 object-cover" />
     </div>
   </div>
 </section>
