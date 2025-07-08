@@ -3,10 +3,10 @@
 <!-- <app-animated-background></app-animated-background> -->
 <div class="relative my-12 px-4" id="home">
   <div class="max-w-7xl mx-auto">
-    <div class="pt-20 px-8 xl:p-20 grid grid-rows-1 xl:grid-cols-2 gap-16 justify-items-center items-center">
-      <h1 class="text-4xl xl:text-5xl text-center text-primary" data-aos="zoom-in" data-aos-duration="2000">
+    <div class="pt-20 px-8 xl:p-20 grid grid-rows-1 md:grid-cols-2 xl:grid-cols-2 gap-16 justify-items-center items-center">
+      <h1 class="font-bold text-4xl xl:text-5xl md:text-left text-center" data-aos="zoom-in" data-aos-duration="2000">
         Revolutionize Your Business. Let's
-        <span class="text-secondary">Build
+        <span class="text-primary">Build
         </span> the future together.
       </h1>
       <div>
@@ -14,7 +14,7 @@
           [responsiveOptions]="responsiveOptions">
           <ng-template let-product pTemplate="item">
             <img ngSrc="{{product.src}}" alt="{{product.alt}}" priority height="800" width="800"
-              class="max-w-full h-auto border-round" />
+              class="max-w-[85%] h-auto border-round" />
           </ng-template>
         </p-carousel>
       </div>
@@ -24,7 +24,7 @@
 
 <div class="pt-4 text-gray-800 px-4" id="services">
   <h2 class="text-center text-3xl xl:text-5xl font-semibold text-gray-800" data-aos="fade-up" data-aos-duration="2000">
-    What we <span class="text-secondary">offer?</span></h2>
+    What we <span class="text-primary">offer?</span></h2>
   <div class="mt-12">
     <app-services></app-services>
   </div>
@@ -33,7 +33,7 @@
 <div class="mt-16" id="projects">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-center text-3xl xl:text-5xl font-semibold text-gray-800 my-12" data-aos="fade-up"
-      data-aos-duration="2000">Our Featured <span class="text-secondary">Projects</span></h2>
+      data-aos-duration="2000">Our Featured <span class="text-primary">Projects</span></h2>
     <div class="hidden xl:block">
       <app-horizontal-scroll></app-horizontal-scroll>
     </div>
@@ -71,7 +71,7 @@
 <div class="my-16 px-4" id="whyus">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-center text-3xl xl:text-5xl font-semibold text-gray-800 my-12" data-aos="fade-up"
-      data-aos-duration="2000">Why <span class="text-secondary">Choose</span>
+      data-aos-duration="2000">Why <span class="text-primary">Choose</span>
       us?
     </h2>
     <div class="max-w-2xl mx-auto">
@@ -89,7 +89,7 @@
 <div class="my-12 px-4" id="contact">
   <div class="max-w-7xl mx-auto">
     <h2 class="text-center text-3xl xl:text-5xl font-semibold text-gray-800 my-12" data-aos="zoom-in"
-      data-aos-duration="2000">Love to hear from you. Get in <span class="text-secondary">touch.</span></h2>
+      data-aos-duration="2000">Love to hear from you. Get in <span class="text-primary">touch.</span></h2>
 
     <div class="text-gray-800 text-xl py-8 flex flex-col">
       <a href="mailto:contactus@vsftcloud.com">

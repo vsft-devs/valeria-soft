@@ -31,6 +31,11 @@ export class HorizontalScrollComponent implements OnInit {
       "name": "Wealthworks Partners",
       "path": 'assets/images/wwpts3.png',
       "alt": 'Wealthworks Partners Logo.',
+    },
+    {
+      "name": "Endo Harmony",
+      "path": "assets/images/endo-logo.png",
+      "alt": 'Endo Harmony Logo',
     }
   ];
   autoScrollInterval: any;

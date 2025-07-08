@@ -76,7 +76,7 @@ export class AppComponent {
         {
           src: 'assets/images/raxa-banner-new-1.jpg',
           alt: 'RAXA Banner.',
-        }, 
+        },
         {
           src: 'assets/images/aviation-academy-class.jpg',
           alt: 'GMR Academy Class.',
@@ -147,7 +147,28 @@ export class AppComponent {
         {
           src: 'assets/images/wwp-3.jpg',
           alt: 'WWP Image 3.',
-        }        
+        }
+      ]
+    },
+    {
+      name: 'Endo Harmony',
+      path: 'assets/images/endo-logo.png',
+      alt: 'Endo Harmony Logo',
+      desc: 'EndoHarmony provides exceptional healthcare services to our community. Their state-of-the-art facilities and compassionate staff ensure that every patient receives personalized care of the highest quality.',
+      site: 'https://endo-harmony.com/',
+      images: [
+        {
+          src: 'assets/images/end-1.jpeg',
+          alt: 'WWP Image 1.',
+        },
+        {
+          src: 'assets/images/diabetes.webp',
+          alt: 'WWP Image 2.',
+        },
+        {
+          src: 'assets/images/women_medicine.jpeg',
+          alt: 'WWP Image 3.',
+        }
       ]
     },
   ];
