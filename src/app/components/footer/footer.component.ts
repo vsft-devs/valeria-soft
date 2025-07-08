@@ -8,13 +8,13 @@ import { Component, HostListener, OnInit } from '@angular/core';
 export class FooterComponent {
   isScrollToTop: boolean = false;
 
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    this.isScrollToTop = scrollTop > 200;
-  }
+  // @HostListener('window:scroll', [])
+  // onWindowScroll(): void {
+  //   const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+  //   this.isScrollToTop = scrollTop > 200;
+  // }
 
-  scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
+  // scrollToTop(): void {
+  //   window.scrollTo({ top: 0, behavior: 'smooth' });
+  // }
 }

@@ -13,7 +13,8 @@
         <p-carousel [value]="images" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000" [showNavigators]="false"
           [responsiveOptions]="responsiveOptions">
           <ng-template let-product pTemplate="item">
-            <img src="{{product}}" class="w-full border-round" />
+            <img ngSrc="{{product.src}}" alt="{{product.alt}}" priority height="800" width="800"
+              class="max-w-full h-auto border-round" />
           </ng-template>
         </p-carousel>
       </div>
@@ -33,37 +34,37 @@
   <div class="max-w-7xl mx-auto">
     <h2 class="text-center text-3xl xl:text-5xl font-semibold text-gray-800 my-12" data-aos="fade-up"
       data-aos-duration="2000">Our Featured <span class="text-secondary">Projects</span></h2>
-      <div class="hidden xl:block">
-        <app-horizontal-scroll></app-horizontal-scroll>
-      </div>
-      <div class="xl:hidden grid justify-center">
-        <p-accordion [activeIndex]="0" class="bg-background">
-          <ng-container *ngFor="let company of companies">
-            <p-accordionTab class="bg-background" iconPos="end">
-              <ng-template pTemplate="header">
-                <div class="flex-shrink-0 h-16 flex items-center justify-center font-bold cursor-pointer px-4">
-                  <img src="{{ company.path }}" *ngIf="company.path" class="h-14 object-contain" />
-                  <span *ngIf="!company.path" class="text-xl">{{company.name}}</span>
-                </div>
-              </ng-template>
-              <div class="py-4 px-4">
-                <p class="transition-transform duration-300 ease-in-out text-lg">
-                  {{ company.desc}}
-                </p>
-                <a href={{company.site}} target="_blank" class="text-primary underline pt-8">View
-                  Site</a>
+    <div class="hidden xl:block">
+      <app-horizontal-scroll></app-horizontal-scroll>
+    </div>
+    <div class="xl:hidden grid justify-center">
+      <p-accordion [activeIndex]="0" class="bg-background">
+        <ng-container *ngFor="let company of companies">
+          <p-accordionTab class="bg-background" iconPos="end">
+            <ng-template pTemplate="header">
+              <div class="flex-shrink-0 h-16 flex items-center justify-center font-bold cursor-pointer px-4">
+                <img src="{{ company.path }}" alt={{company.alt}} *ngIf="company.path" class="h-14 object-contain" />
+                <span *ngIf="!company.path" class="text-xl">{{company.name}}</span>
               </div>
-              <div class="flex flex-row px-4">
-                <img *ngFor="let img of company.images" src={{img}} class="h-16 object-fit" />
-              </div>
+            </ng-template>
+            <div class="py-4 px-4">
+              <p class="transition-transform duration-300 ease-in-out text-lg">
+                {{ company.desc }}
+              </p>
+              <a href={{company.site}} target="_blank" class="text-primary pt-8">Visit Site</a>
+            </div>
+            <div class="flex flex-row px-4">
+              <img *ngFor="let img of company.images" src={{img.src}} alt={{img.alt}} fetchpriority="low"
+                class="h-16 object-fit" />
+            </div>
 
-            </p-accordionTab>
-            <p-footer>
-              <hr/>
-            </p-footer>
-          </ng-container>
-        </p-accordion>
-      </div>
+          </p-accordionTab>
+          <p-footer>
+            <hr />
+          </p-footer>
+        </ng-container>
+      </p-accordion>
+    </div>
   </div>
 
 </div>
@@ -93,14 +94,15 @@
     <div class="text-gray-800 text-xl py-8 flex flex-col">
       <a href="mailto:contactus@vsftcloud.com">
         <p class="flex flex-row justify-start xl:justify-center my-2" data-aos="fade-right" data-aos-duration="1000">
-          <img src="assets/images/email.svg" class="h-8 mx-4">
+          <img src="assets/images/email.svg" alt="Email." class="h-8 mx-4">
           contactus&#64;vsftcloud.com
         </p>
       </a>
       <a
         href="https://www.google.com/maps/place/Pleasanton+CA/data=!4m2!3m1!1s0x808fe9a261ba755f:0xb3ab6847e1ea7d16?sa=X&ved=1t:155783&ictx=111">
         <p class="flex flex-row justify-start xl:justify-center my-2" data-aos="fade-right" data-aos-duration="2000">
-          <img src="assets/images/address.svg" class="h-8 mx-4">Pleasanton CA 94588</p>
+          <img src="assets/images/address.svg" alt="Address." class="h-8 mx-4">Pleasanton CA 94588
+        </p>
       </a>
     </div>
   </div>
